@@ -1,1 +1,57 @@
-<!DOCTYPE HTML><html lang="en-US"><head>    <meta charset="UTF-8">    <title>mailPilot</title>    <script type="text/javascript" src="http://aharrisbooks.net/h5g/simpleGame_1_0.js"></script>    <script type="text/javascript">      //variables      var Scene;      var Plane;      var Background;            //constants      var speedOfBackground = 15;            function Plane() {        tPlane = new Sprite(scene, "retroplane1.png", 50, 50);        tPlane.setSpeed(0);        tPlane.setPosition();        tPlane.followMouse = function() {          this.setPosition(scene.getMouseX(), 500);        }        return tPlane;      }      function Background(){        tBackground = new Sprite(scene, "overheadgroundpic.jpg", 800, 1440);        tBackground.setDX(0);        tBackground.setDY(speedOfBackground);        tBackground.setPosition(400, 0);        tBackground.checkBounds = function(){            if (this.y > 720){                this.setPosition(400, -120)            }        }                        return tBackground;    }      function init() {        scene = new Scene();        scene.hideCursor();        plane = new Plane();        background = new Background();        scene.start();      }      function update() {        scene.clear();        plane.followMouse();        plane.update();        background.update();    }    </script></head><body onload = "init()">    </body></html>
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <title>mailPilot</title>
+    <script type="text/javascript" src="simpleGamejs"></script>
+    <script type="text/javascript">
+      //variables
+      var Scene;
+      var Plane;
+      var Background;
+      
+      //constants
+      var speedOfBackground = 15;
+      
+      function Plane() {
+        tPlane = new Sprite(scene, "retroplane1.png", 50, 50);
+        tPlane.setSpeed(0);
+        tPlane.setPosition();
+        tPlane.followMouse = function() {
+          this.setPosition(scene.getMouseX(), 500);
+        }
+        return tPlane;
+      }
+      function Background(){
+        tBackground = new Sprite(scene, "overheadgroundpic.jpg", 800, 1440);
+        tBackground.setDX(0);
+        tBackground.setDY(speedOfBackground);
+        tBackground.setPosition(400, 0);
+        tBackground.checkBounds = function(){
+            if (this.y > 720){
+                this.setPosition(400, -120)
+            }
+        }
+        
+        
+        return tBackground;
+    }
+      function init() {
+        scene = new Scene();
+        scene.hideCursor();
+        plane = new Plane();
+        background = new Background();
+        scene.start();
+      }
+      function update() {
+        scene.clear();
+        plane.followMouse();
+        plane.update();
+        background.update();
+    }
+    </script>
+</head>
+<body onload = "init()">
+    
+</body>
+</html>
