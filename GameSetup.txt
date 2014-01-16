@@ -1,0 +1,24 @@
+Congratulations on your download of FlyFar!
+
+This document will walk you through the steps to properly set the game up on your computer.
+Before continuing, please read the README.md file.
+
+If you are a Mac user:
+1) Download the .zip file (this can be obtained from GitHub or the FlyFar website)
+2) Click the downloads folder icon at the upper right corner of the Safari window so that the downloads list appears
+3) Right click the top file (which will have the words 'WebWonders' and 'FlyFar' in it) and click Open
+4) A Finder window will open
+5) Right click the file entitled 'FlyFar.html'
+6) Roll your pointer over 'Open With'
+7) Select 'Safari'
+8) You will be directed to Safari where a new tab will open
+9) Once the tab loads, FlyFar will begin
+10) Have fun playing FlyFar by WebWonders!
+
+If you are a Windows user:
+1) 
+
+Don't forget to Star the project on GitHub!
+Check the FlyFar wiki on GitHub for updates
+
+Courtesy of WebWonders
