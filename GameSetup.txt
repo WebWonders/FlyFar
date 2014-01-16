@@ -14,9 +14,18 @@ If you are a Mac user:
 8) You will be directed to Safari where a new tab will open
 9) Once the tab loads, FlyFar will begin
 10) Have fun playing FlyFar by WebWonders!
-
+------
 If you are a Windows user:
-1) 
+1) Download the .zip file (this can be obtained from GitHub or the FlyFar website)
+2) At the bottom of the Internet Explorer window, a menu will appear
+3) Click open
+4) When the download completes, a window will open that contains a file entitled FlyFar-master
+5) Double-click the folder to open it
+6) Find the file in the folder entitled FlyFar (it will be an HTML document)
+7) Right click it
+8) Select 'open'
+9) You will be directed to Internet Explorer where a new tab will open, containing the game
+10) Have fun playing FlyFar by WebWonders!
 
 Don't forget to Star the project on GitHub!
 Check the FlyFar wiki on GitHub for updates
