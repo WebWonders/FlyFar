@@ -16,7 +16,7 @@ If you are a Mac user:
 10) Have fun playing FlyFar by WebWonders!
 ------
 If you are a Windows user:
-1) Download the .zip file (this can be obtained from GitHub or the FlyFar website)
+1) Make sure you have downloaded the .zip version of FlyFar (this can be obtained from GitHub or the FlyFar website)
 2) At the bottom of the Internet Explorer window, a menu will appear
 3) Click open
 4) When the download completes, a window will open that contains a file entitled FlyFar-master
