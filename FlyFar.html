@@ -15,7 +15,9 @@
       var userScore;
       
       //constants
-      var speedOfBackground = 15;
+      var SPEED_OF_BACKGROUND = 15;
+      var NUM_BATTERIES = 1;
+      var NUM_CLOUDS = 3
       
       function Plane() {
         tPlane = new Sprite(scene, "Images/retroplane1.png", 50, 50);
@@ -53,26 +55,20 @@
     }
     
     function updateBatteries(){
-        for (i = 0; i < NUM_CLOUDS; i++){
-            clouds[i].update();
+        for (i = 0; i < NUM_BATTERIES; i++){
+            batteries[i].update();
         }
     }
     }
-    function Ocean(){
-        tOcean = new Sprite(scene, "Images/ocean.gif", 800, 1440);
-        tOcean.setDX(0);
-        tOcean.setDY(OCEAN_SPEED);
-        tOcean.setPosition(400, 0);
       function Background(){
         tBackground = new Sprite(scene, "Images/overheadgroundpic.jpg", 800, 1440);
         tBackground.setDX(0);
-        tBackground.setDY(speedOfBackground);
+        tBackground.setDY(SPEED_OF_BACKGROUND);
         tBackground.setPosition(400, 0);
         tBackground.checkBounds = function(){
             if (this.y > 720){
                 this.setPosition(400, -120)
             }
-        }
         return tBackground;
      }
       function init() {
@@ -97,14 +93,14 @@
         //currentTime = timer.getElapsedTime();
         //timePut.innerHTML = currentTime;
     }
-    function reset() {
+/*    function reset() {
         flyTime.reset();
         scoreTime.reset();
         alert("Your score was" + Math.floor(userScore));
     }
     function findScore() {
         userScore = scoreTime.getElapsedTime();
-    }
+    }*/
     </script>
 </head>
 <body onload="init()">
