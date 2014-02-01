@@ -1,4 +1,3 @@
-
       //variables
       var scene;
       var plane;
@@ -14,7 +13,7 @@
       var NUM_CLOUDS = 3
       
       function Plane() {
-        tPlane = new Sprite(scene, "Images/retroplane1.png", 50, 50);
+        tPlane = new Sprite(scene, "../Images/retroplane1.png", 50, 50);
         tPlane.setSpeed(0);
         tPlane.setPosition();
         tPlane.followMouse = function() {
@@ -23,7 +22,7 @@
         return tPlane;
       }
       function Battery() {
-        tBattery = new Sprite(scene, "Images/Battery.png", 150, 100);
+        tBattery = new Sprite(scene, "../Images/Battery.png", 150, 100);
       tBattery.reset = function(){
             this.setDY((Math.random() * OCEAN_SPEED) + 5);
             this.setDX((Math.random() * 10) - 5);
@@ -55,7 +54,7 @@
     }
     }
       function Background(){
-        tBackground = new Sprite(scene, "Images/overheadgroundpic.jpg", 800, 1440);
+        tBackground = new Sprite(scene, "../Images/overheadgroundpic.jpg", 800, 1440);
         tBackground.setDX(0);
         tBackground.setDY(SPEED_OF_BACKGROUND);
         tBackground.setPosition(400, 0);
