@@ -94,3 +94,4 @@
     function findScore() {
         userScore = scoreTime.getElapsedTime();
     }*/
+}
