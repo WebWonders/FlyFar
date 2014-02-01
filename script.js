@@ -52,7 +52,7 @@
             batteries[i].update();
         }
     }
-    }
+    
       function Background(){
         tBackground = new Sprite(scene, "../Images/overheadgroundpic.jpg", 800, 1440);
         tBackground.setDX(0);
