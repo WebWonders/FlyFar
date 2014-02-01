@@ -64,7 +64,7 @@
             }
         return tBackground;
      }
-      function doItAll() {
+      function init() {
         scene = new Scene();
         scene.hideCursor();
         //timePut = document.getElementById('timeLeft');
@@ -96,4 +96,3 @@
     }*/
 }
 
-doItAll();
