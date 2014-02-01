@@ -95,3 +95,5 @@
         userScore = scoreTime.getElapsedTime();
     }*/
 }
+
+init();
