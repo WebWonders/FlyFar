@@ -62,6 +62,7 @@
             if (this.y > 720){
                 this.setPosition(400, -120)
             }
+        }
         return tBackground;
      }
       function init() {
@@ -94,5 +95,4 @@
     function findScore() {
         userScore = scoreTime.getElapsedTime();
     }*/
-}
 
