@@ -3,14 +3,21 @@
       var plane;
       var background;
       var batteries;
+      var gasCans;
+      var bombs;
       var flyTime;
       var scoreTime;
       var userScore;
       
       //constants
       var SPEED_OF_BACKGROUND = 15;
-      var NUM_BATTERIES = 1;
-      var NUM_CLOUDS = 3
+      var NUM_BATTERIES = counter();
+      var NUM_GAS_CANS = counter();
+      var NUM_BOMBS = counter();
+      
+      function counter() {
+            this.Math.floor(Math.random() * 2);
+      }
       
       function Plane() {
         tPlane = new Sprite(scene, "Images/RetroPlane1.png", 50, 50);
