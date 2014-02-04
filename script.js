@@ -13,7 +13,7 @@
       var NUM_CLOUDS = 3
       
       function Plane() {
-        tPlane = new Sprite(scene, "../Images/retroplane1.png", 50, 50);
+        tPlane = new Sprite(scene, "../Images/RetroPlane1.png", 50, 50);
         tPlane.setSpeed(0);
         tPlane.setPosition();
         tPlane.followMouse = function() {
