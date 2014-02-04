@@ -2,7 +2,7 @@
   background-color: #3399FF;
   text-align: center;
 }
-aside {
+aside, ul, li {
   text-align: center;
   background-color: #99CCFF;
   border: 2px solid #6699CC;
