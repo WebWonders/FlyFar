@@ -12,19 +12,6 @@
       var NUM_BATTERIES = 1;
       var NUM_CLOUDS = 3
       
-      function Background(){
-        tBackground = new Sprite(scene, "../Images/OverheadGroundPic.jpg", 800, 1440);
-        tBackground.setDX(0);
-        tBackground.setDY(SPEED_OF_BACKGROUND);
-        tBackground.setPosition(400, 0);
-        tBackground.checkBounds = function(){
-            if (this.y > 720){
-                this.setPosition(400, -120)
-            }
-        }
-        return tBackground;
-     }
-      
       function Plane() {
         tPlane = new Sprite(scene, "../Images/RetroPlane1.png", 50, 50);
         tPlane.setSpeed(0);
@@ -66,6 +53,19 @@
         }
     }
     
+    function Background(){
+        tBackground = new Sprite(scene, "../Images/OverheadGroundPic.jpg", 800, 1440);
+        tBackground.setDX(0);
+        tBackground.setDY(SPEED_OF_BACKGROUND);
+        tBackground.setPosition(400, 0);
+        tBackground.checkBounds = function(){
+            if (this.y > 720){
+                this.setPosition(400, -120)
+            }
+        }
+        return tBackground;
+     }
+    
       function init() {
         scene = new Scene();
         scene.hideCursor();
@@ -74,9 +74,9 @@
         //flyTime.reset();
         //scoreTime = new Timer();
         //scoreTime.reset();
-        background = new Background();
         plane = new Plane();
         makeBatteries();
+        background = new Background();
         //findScore();
         scene.start();
       }
