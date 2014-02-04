@@ -83,8 +83,9 @@
       function update() {
         scene.clear();
         plane.followMouse();
-        plane.update();
         background.update();
+        plane.update();
+        updateBatteries();
         //currentTime = timer.getElapsedTime();
         //timePut.innerHTML = currentTime;
     }
