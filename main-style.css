@@ -2,7 +2,7 @@
   background-color: #3399FF;
   text-align: center;
 }
-aside, ul, li {
+aside {
   text-align: center;
   background-color: #99CCFF;
   border: 2px solid #6699CC;
@@ -14,4 +14,8 @@ aside, ul, li {
   border: 2px solid #6699CC;
   border-radius: 5px;
   display: block;
+}
+
+ul, li {
+  background-color: #99CCFF;
 }
