@@ -3,7 +3,6 @@
       var plane;
       var background;
       var batteries;
-      var flyTime;
       var scoreTime;
       var userScore;
       
@@ -72,11 +71,11 @@
       function init() {
         scene = new Scene();
         scene.hideCursor();
+        //score
         timePut = document.getElementById('timeLeft');
-        flyTime = new Timer();
-        flyTime.reset();
         scoreTime = new Timer();
-        scoreTime.reset();
+        //scoreTime.reset();
+        //end score
         plane = new Plane();
         makeBatteries();
         background = new Background();
@@ -90,14 +89,13 @@
         background.update();
         plane.update();
         updateBatteries();
-        currentTime = timer.getElapsedTime();
+        currentTime = 60 - timer.getElapsedTime();
         timePut.innerHTML = currentTime;
       } //end update
     
     function reset() {
-        flyTime.reset();
+        alert("Your score was" + Math.round(currentTime));
         scoreTime.reset();
-        alert("Your score was" + Math.round(userScore));
     } //end reset
     
     function findScore() {
