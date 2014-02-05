@@ -11,7 +11,7 @@
       
       //constants
       var SPEED_OF_BACKGROUND = 15;
-      var NUM_BATTERIES = counter();
+      var NUM_BATTERIES = 1;
       var NUM_GAS_CANS = counter();
       var NUM_BOMBS = counter();
       
