@@ -13,7 +13,7 @@
       var NUM_CLOUDS = 3
       
       function Plane() {
-        tPlane = new Sprite(scene, "Images/RetroPlane1.png", 50, 50);
+        tPlane = new Sprite(scene, "Images/RetroPlane.png", 50, 50);
         tPlane.setSpeed(0);
         tPlane.setPosition();
         tPlane.followMouse = function() {
@@ -22,7 +22,7 @@
         return tPlane;
       }
       function Battery() {
-        tBattery = new Sprite(scene, "Images/Battery.png", 150, 100);
+        tBattery = new Sprite(scene, "Images/BatteryPic.png", 150, 100);
       tBattery.reset = function(){
             this.setDY((Math.random() * SPEED_OF_BACKGROUND) + 5);
             this.setDX((Math.random() * 10) - 5);
