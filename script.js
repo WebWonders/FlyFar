@@ -103,3 +103,7 @@
     function findScore() {
         userScore = scoreTime.getElapsedTime();
     } //end findScore()
+    
+    if (currentTime => 0) {
+          reset();
+    } //endif
