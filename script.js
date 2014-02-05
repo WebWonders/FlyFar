@@ -6,7 +6,7 @@
       var gasCans;
       var bombs;
       var scoreTime;
-      var userScore;
+      var timePut = document.getElementById('timeLeft');
       
       //constants
       var SPEED_OF_BACKGROUND = 15;
@@ -78,7 +78,6 @@
       function init() {
         scene = new Scene();
         scene.hideCursor();
-        timePut = document.getElementById('timeLeft');
         scoreTime = new Timer();
         //scoreTime.reset();
         plane = new Plane();
@@ -94,14 +93,14 @@
         background.update();
         plane.update();
         updateBatteries();
-        currentTime = 60 - scoreTime.getElapsedTime();
-        timePut.innerHTML = currentTime;
+        scoreTime = Math.round(60 - scoreTime.getElapsedTime());
+        timePut.innerHTML = scoreTime;
     } //end update()
     function reset() {
         alert("Your score was" + Math.round(scoreTime));
         scoreTime.reset();
-    }
+    } //end reset()
+    
     function findScore() {
         userScore = scoreTime.getElapsedTime();
-    }
-
+    } //end findScore()
