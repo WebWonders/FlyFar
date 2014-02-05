@@ -23,6 +23,7 @@
         tPlane = new Sprite(scene, "Images/RetroPlane.png", 50, 50);
         tPlane.setSpeed(0);
         tPlane.setPosition();
+        tPlane.setBoundAction(STOP);
         tPlane.followMouse = function() {
           this.setPosition(scene.getMouseX(), 500);
         }
