@@ -79,11 +79,10 @@
         scene = new Scene();
         scene.hideCursor();
         scoreTime = new Timer();
-        //scoreTime.reset();
+        scoreTime.reset();
         plane = new Plane();
         makeBatteries();
         background = new Background();
-        //findScore();
         scene.start();
       } //end init()
       
