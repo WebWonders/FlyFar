@@ -104,6 +104,6 @@
         userScore = scoreTime.getElapsedTime();
     } //end findScore()
     
-    if (currentTime => 0) {
+    if (currentTime >= 0) {
           reset();
     } //endif
