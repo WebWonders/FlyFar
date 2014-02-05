@@ -10,32 +10,40 @@
       var plane;
       var background;
       var batteries;
-      var flyTime;
+      var gasCans;
+      var bombs;
       var scoreTime;
       var userScore;
       
       //constants
       var SPEED_OF_BACKGROUND = 15;
       var NUM_BATTERIES = 1;
-      var NUM_CLOUDS = 3
+      var NUM_GAS_CANS = counter();
+      var NUM_BOMBS = counter();
+      
+      function counter() {
+            this.Math.floor(Math.random() * 2);
+      } //end counter()
       
       function Plane() {
-        tPlane = new Sprite(scene, "GameImages/RetroPlane.png", 50, 50);
+        tPlane = new Sprite(scene, "Images/RetroPlane.png", 50, 50);
         tPlane.setSpeed(0);
         tPlane.setPosition();
+        tPlane.setBoundAction(CONTINUE);
         tPlane.followMouse = function() {
           this.setPosition(scene.getMouseX(), 500);
         }
         return tPlane;
-      }
+      } //end Plane()
+      
       function Battery() {
-        tBattery = new Sprite(scene, "GameImages/BatteryPic.png", 150, 100);
+        tBattery = new Sprite(scene, "Images/BatteryPic.png", 150, 100);
       tBattery.reset = function(){
             this.setDY((Math.random() * SPEED_OF_BACKGROUND) + 5);
             this.setDX((Math.random() * 10) - 5);
             newX = Math.random() * scene.width;
             this.setPosition(newX, 50);
-        } // end reset
+        }
         
         tBattery.checkBounds = function(){
             if (this.y > scene.height){
@@ -46,22 +54,23 @@
         tBattery.reset();
         
         return tBattery;
-    }
+    } //end Battery()
+    
     function makeBatteries(){
         batteries = new Array(NUM_BATTERIES);
         for (i = 0; i < NUM_BATTERIES; i++){
             batteries[i] = new Battery();
         }
-    }
+    } //end makeBatteries()
     
     function updateBatteries(){
         for (i = 0; i < NUM_BATTERIES; i++){
             batteries[i].update();
         }
-    }
+    } //end updateBatteries
     
     function Background(){
-        tBackground = new Sprite(scene, "GameImages/OverheadGroundPic.jpg", 800, 1440);
+        tBackground = new Sprite(scene, "Images/OverheadGroundPic.jpg", 800, 1440);
         tBackground.setDX(0);
         tBackground.setDY(SPEED_OF_BACKGROUND);
         tBackground.setPosition(400, 0);
@@ -71,39 +80,37 @@
             }
         }
         return tBackground;
-     }
+     } //end Background()
     
       function init() {
         scene = new Scene();
         scene.hideCursor();
-        //timePut = document.getElementById('timeLeft');
-        //flyTime = new Timer();
-        //flyTime.reset();
-        //scoreTime = new Timer();
+        timePut = document.getElementById('timeLeft');
+        scoreTime = new Timer();
         //scoreTime.reset();
         plane = new Plane();
         makeBatteries();
         background = new Background();
         //findScore();
         scene.start();
-      }
+      } //end init()
+      
       function update() {
         scene.clear();
         plane.followMouse();
+        background.update();
         plane.update();
         updateBatteries();
-        background.update();
-        //currentTime = timer.getElapsedTime();
-        //timePut.innerHTML = currentTime;
-    }
-/*    function reset() {
-        flyTime.reset();
+        currentTime = 60 - scoreTime.getElapsedTime();
+        timePut.innerHTML = currentTime;
+    } //end update()
+    function reset() {
+        alert("Your score was" + Math.round(scoreTime));
         scoreTime.reset();
-        alert("Your score was" + Math.floor(userScore));
     }
     function findScore() {
         userScore = scoreTime.getElapsedTime();
-    }*/
+    }
 
 
     </script>
