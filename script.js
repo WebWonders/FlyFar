@@ -78,8 +78,8 @@
       function init() {
         scene = new Scene();
         scene.hideCursor();
-        scoreTime = new Timer();
-        scoreTime.reset();
+        currentTime = new Timer();
+        currentTime.reset();
         plane = new Plane();
         makeBatteries();
         background = new Background();
@@ -92,7 +92,7 @@
         background.update();
         plane.update();
         updateBatteries();
-        scoreTime = Math.round(60 - scoreTime.getElapsedTime());
+        scoreTime = Math.round(60 - currentTime.getElapsedTime());
         timePut.innerHTML = scoreTime;
     } //end update()
     function reset() {
