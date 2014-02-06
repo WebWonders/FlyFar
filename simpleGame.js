@@ -1,5 +1,5 @@
 /* simpleGame.js
-   a very basic game library for the canvas tag
+   a game library for the canvas tag
    loosely based on Python gameEngine
    and Scratch
    expects an HTML5-compliant browser
