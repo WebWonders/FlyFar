@@ -99,7 +99,7 @@
     
       function init() {
         scene = new Scene();
-        
+        findCountry();
         scene.hideCursor();
         currentTime = new Timer();
         currentTime.reset();
