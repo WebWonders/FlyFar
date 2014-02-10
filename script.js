@@ -7,6 +7,7 @@
       var bombs;
       var scoreTime;
       var timePut = document.getElementById('timeLeft');
+      var menu;
       
       //constants
       var SPEED_OF_BACKGROUND = 15;
@@ -74,8 +75,15 @@
         }
         return tBackground;
      } //end Background()
+     
+      function menuScreen() {
+            menu = new Scene();
+            scene.hide();
+            
+      }
     
       function init() {
+        menuScreen();
         scene = new Scene();
         scene.hideCursor();
         currentTime = new Timer();
