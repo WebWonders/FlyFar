@@ -80,7 +80,7 @@
             menu = new Scene();
             scene.hide();
             menu.start();
-      }
+      
       $(document).ready(function() {
             $(menu).onClick(function() {
                   menu.hide();
@@ -88,6 +88,7 @@
                   scene.start();
             })
       });
+      }
     
       function init() {
         menuScreen();
