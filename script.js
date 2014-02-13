@@ -79,8 +79,15 @@
       function menuScreen() {
             menu = new Scene();
             scene.hide();
-            
+            menu.start();
       }
+      $(document).ready(function() {
+            $(menu).onClick(function() {
+                  menu.hide();
+                  scene.show();
+                  scene.start();
+            })
+      });
     
       function init() {
         menuScreen();
@@ -91,7 +98,6 @@
         plane = new Plane();
         makeBatteries();
         background = new Background();
-        scene.start();
       } //end init()
       
       function update() {
