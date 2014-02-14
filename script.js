@@ -86,6 +86,7 @@
                   menu.hide();
                   scene.show();
                   scene.start();
+                  $(this).fadeTo(0, fast);
             });
       });
       }
