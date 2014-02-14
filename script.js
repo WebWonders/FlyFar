@@ -82,11 +82,11 @@
             menu.start();
       
       $(document).ready(function() {
-            $(menu).onClick(function() {
+            $('#playGameButton').onClick(function() {
                   menu.hide();
                   scene.show();
                   scene.start();
-            })
+            });
       });
       }
     
