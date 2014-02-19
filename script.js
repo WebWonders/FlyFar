@@ -76,7 +76,7 @@
         return tBackground;
      } //end Background()
      
-      function menuScreen() {
+      /*function menuScreen() {
             menu = new Scene();
             scene.hide();
             menu.start();
@@ -89,10 +89,10 @@
                   $(this).fadeTo(0, fast);
             });
       });
-      }
+      }*/
     
       function init() {
-        menuScreen();
+        //menuScreen();
         scene = new Scene();
         scene.hideCursor();
         currentTime = new Timer();
