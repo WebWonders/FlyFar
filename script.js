@@ -38,7 +38,7 @@
             this.setPosition(newX, 50);
         }
         
-        tBattery.checkBounds = function(){
+        tBattery.checkBounds = function() {
             if (this.y > scene.height){
                 this.reset();
             }
@@ -49,20 +49,20 @@
         return tBattery;
     } //end Battery()
     
-    function makeBatteries(){
+    function makeBatteries() {
         batteries = new Array(NUM_BATTERIES);
         for (i = 0; i < NUM_BATTERIES; i++){
             batteries[i] = new Battery();
         }
     } //end makeBatteries()
     
-    function updateBatteries(){
+    function updateBatteries() {
         for (i = 0; i < NUM_BATTERIES; i++){
             batteries[i].update();
         }
     } //end updateBatteries
     
-    function Background(){
+    function Background() {
         tBackground = new Sprite(scene, "Images/OverheadGroundPic.jpg", 800, 1440);
         tBackground.setDX(0);
         tBackground.setDY(SPEED_OF_BACKGROUND);
@@ -74,6 +74,15 @@
         }
         return tBackground;
      } //end Background()
+     
+     function checkCollisions() {
+           for (i = 0; i < NUM_BATTERIES; i++){
+            if (plane.collidesWith(batteries[i])){
+                batteries[i].reset();
+                scoreTime = scoreTime + 5;
+            }
+        }
+     } //end checkCollisions()
     
       function init() {
         scene = new Scene();
