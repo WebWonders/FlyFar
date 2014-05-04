@@ -15,7 +15,9 @@
       var NUM_BOMBS = counter();
       
       function counter() {
-            this.Math.floor(Math.random() * 2);
+            var aRand = Math.floor(Math.random() * 2);
+            
+            return aRand;
       } //end counter()
       
       function Plane() {
