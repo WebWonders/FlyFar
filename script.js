@@ -106,7 +106,8 @@
         scoreTime = Math.round(30 - currentTime.getElapsedTime());
         document.getElementById('timeLeft').innerHTML = scoreTime;
     } //end update()
-    function reset() {
+    
+    function resetGame() {
         alert("Your score was" + Math.round(scoreTime));
         scoreTime.reset();
     } //end reset()
@@ -115,6 +116,6 @@
         userScore = scoreTime.getElapsedTime();
     } //end findScore()
     
-    if (currentTime >= 0) {
-          reset();
+    if (currentTime <= 0) {
+          resetGame();
     } //endif
