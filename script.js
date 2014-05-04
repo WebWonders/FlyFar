@@ -6,7 +6,6 @@
       var gasCans;
       var bombs;
       var scoreTime;
-      var timePut = document.getElementById('timeLeft');
       
       //constants
       var SPEED_OF_BACKGROUND = 15;
@@ -105,7 +104,7 @@
         plane.update();
         updateBatteries();
         scoreTime = Math.round(30 - currentTime.getElapsedTime());
-        timePut.innerHTML = scoreTime;
+        document.getElementById('timeLeft').innerHTML = scoreTime;
     } //end update()
     function reset() {
         alert("Your score was" + Math.round(scoreTime));
