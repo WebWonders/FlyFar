@@ -108,7 +108,7 @@
     } //end update()
     
     function resetGame() {
-        alert("Your score was" + Math.round(scoreTime));
+        alert("Your score was" + scoreTime;
         scoreTime.reset();
     } //end reset()
     
@@ -116,6 +116,6 @@
         userScore = scoreTime.getElapsedTime();
     } //end findScore()
     
-    if (currentTime <= 0) {
+    if (scoreTime <= 0) {
           resetGame();
     } //endif
