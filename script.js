@@ -109,7 +109,7 @@
     
     function resetGame() {
         alert("Your score was" + scoreTime);
-        scoreTime.reset();
+        currentTime = reset();
     } //end reset()
     
     function findScore() {
