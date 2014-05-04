@@ -108,7 +108,7 @@
     } //end update()
     
     function resetGame() {
-        alert("Your score was" + scoreTime;
+        alert("Your score was" + scoreTime);
         scoreTime.reset();
     } //end reset()
     
