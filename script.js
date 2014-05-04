@@ -33,7 +33,8 @@
       
       function Battery() {
         tBattery = new Sprite(scene, "Images/BatteryPic.png", 150, 100);
-      tBattery.reset = function(){
+        
+        tBattery.reset = function(){
             this.setDY((Math.random() * SPEED_OF_BACKGROUND) + 5);
             this.setDX((Math.random() * 10) - 5);
             newX = Math.random() * scene.width;
@@ -103,7 +104,7 @@
         background.update();
         plane.update();
         updateBatteries();
-        scoreTime = Math.round(60 - currentTime.getElapsedTime());
+        scoreTime = Math.round(30 - currentTime.getElapsedTime());
         timePut.innerHTML = scoreTime;
     } //end update()
     function reset() {
