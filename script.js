@@ -10,8 +10,8 @@
       //constants
       var SPEED_OF_BACKGROUND = 15;
       var NUM_BATTERIES = 1;
-      var NUM_GAS_CANS = counter();
-      var NUM_BOMBS = counter();
+      var NUM_GAS_CANS = 1;
+      var NUM_BOMBS = 1;
       
       function counter() {
             var aRand = Math.floor(Math.random() * 2);
@@ -105,7 +105,7 @@
         updateBatteries();
         scoreTime = Math.round(30 - currentTime.getElapsedTime());
         document.getElementById('timeLeft').innerHTML = scoreTime;
-    } //end update()
+     } //end update()
     
     function resetGame() {
         alert("Your score was" + scoreTime);
