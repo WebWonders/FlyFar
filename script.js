@@ -7,6 +7,7 @@
       var bombs;
       var scoreTime;
       var currentTime;
+      var userScore;
       
       //constants
       var SPEED_OF_BACKGROUND = 15;
@@ -111,7 +112,7 @@
      } //end update()
     
     function resetGame() {
-        alert("Your score was" + scoreTime);
+        alert("Your score was" + userScore);
         currentTime = reset();
     } //end reset()
     
