@@ -31,7 +31,7 @@
       } //end Plane()
       
       function Battery() {
-        tBattery = new Sprite(scene, "Images/BatteryPic.png", 150, 100);
+        tBattery = new Sprite(scene, "Images/BatteryPic.png", 100, 100);
         
         tBattery.reset = function(){
             this.setDY((Math.random() * SPEED_OF_BACKGROUND) + 5);
