@@ -7,7 +7,7 @@
       var bombs;
       var scoreTime;
       var currentTime;
-      var userScore;
+      var userScore = 0;
       
       //constants
       var SPEED_OF_BACKGROUND = 15;
@@ -107,11 +107,13 @@
         plane.update();
         updateBatteries();
         checkCollisions();
+        isEnd();
         scoreTime = Math.round(30 - currentTime.getElapsedTime());
         document.getElementById('timeLeft').innerHTML = scoreTime;
      } //end update()
     
     function resetGame() {
+        findScore();
         alert("Your score was" + userScore);
         currentTime = reset();
     } //end reset()
@@ -120,6 +122,8 @@
         userScore += scoreTime.getElapsedTime();
     } //end findScore()
     
-    if (currentTime <= 0) {
-          resetGame();
-    } //endif
+    function isEnd() {
+      if (scoreTime === 0) {
+            resetGame();
+      } //endif
+    }
