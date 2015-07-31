@@ -81,7 +81,7 @@
            for (i = 0; i < NUM_BATTERIES; i++){
             if (plane.collidesWith(batteries[i])){
                 batteries[i].reset();
-                scoreTime = scoreTime + 5;
+                userScore += 5;
             }
         }
      } //end checkCollisions()
@@ -113,9 +113,9 @@
     } //end reset()
     
     function findScore() {
-        userScore = scoreTime.getElapsedTime();
+        userScore += scoreTime.getElapsedTime();
     } //end findScore()
     
-    if (scoreTime <= 0) {
+    if (currentTime <= 0) {
           resetGame();
     } //endif
