@@ -6,6 +6,7 @@
       var gasCans;
       var bombs;
       var scoreTime;
+      var currentTime;
       
       //constants
       var SPEED_OF_BACKGROUND = 15;
