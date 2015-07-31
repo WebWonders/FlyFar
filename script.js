@@ -107,19 +107,18 @@
         plane.update();
         updateBatteries();
         checkCollisions();
+        findScore();
         isEnd();
         scoreTime = Math.round(30 - currentTime.getElapsedTime());
         document.getElementById('timeLeft').innerHTML = scoreTime;
      } //end update()
     
-    function resetGame() {
-        findScore();
-        alert("Your score was" + userScore);
+    function resetGame() {        alert("Your score was" + userScore);
         currentTime = reset();
     } //end reset()
     
     function findScore() {
-        userScore += scoreTime.getElapsedTime();
+        userScore += currentTime.getElapsedTime();
     } //end findScore()
     
     function isEnd() {
