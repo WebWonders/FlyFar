@@ -105,6 +105,7 @@
         background.update();
         plane.update();
         updateBatteries();
+        checkCollisions();
         scoreTime = Math.round(30 - currentTime.getElapsedTime());
         document.getElementById('timeLeft').innerHTML = scoreTime;
      } //end update()
