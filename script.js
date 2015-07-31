@@ -93,6 +93,7 @@
         currentTime = new Timer();
         currentTime.reset();
         plane = new Plane();
+        plane.show();
         makeBatteries();
         background = new Background();
         scene.start();
