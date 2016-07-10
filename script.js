@@ -1,6 +1,11 @@
       //variables
       var scene;
       var plane;
+      var country;
+      var America;
+      var Germany;
+      var Britan;
+      var defaultCountry = "Images/RetroPlane.png";
       var background;
       var batteries;
       var gasCans;
@@ -22,7 +27,7 @@
       } //end counter()
       
       function Plane() {
-        tPlane = new Sprite(scene, "Images/RetroPlane.png", 50, 50);
+        tPlane = new Sprite(scene, country, 50, 50);
         tPlane.setSpeed(0);
         tPlane.setPosition();
         tPlane.setBoundAction(STOP);
@@ -88,8 +93,26 @@
         }
      } //end checkCollisions()
     
+    function findCountry() {
+          var whatCountry = prompt("What country do you want to play as? America, Germany, or Britan? If you don't write anything, your plane will be the default plane.").toUpperCase;
+          switch(whatCountry) {
+                case 'AMERICA':
+                      country = America;
+                break;
+                case 'GERMANY':
+                      country = Germany;
+                break;
+                case 'Britan':
+                      country = Britan;
+                break
+                default:
+                      country = defaultCountry;
+          }
+    }
+    
       function init() {
         scene = new Scene();
+        findCountry();
         scene.hideCursor();
         currentTime = new Timer();
         currentTime.reset();
